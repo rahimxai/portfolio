@@ -7,6 +7,8 @@ wrangler.jsonc
 .assetsignore
 _tools
 _tools/**
+is-a-dev-record
+is-a-dev-record/**
 README.md
 node_modules
 node_modules/**
