@@ -1,0 +1,16 @@
+# Local demo videos — hosted on YouTube instead
+assets/videos/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python helper scripts (background removal experiments)
+_tools/__pycache__/
+__pycache__/
+*.pyc
+
+# Local server / logs
+*.log
