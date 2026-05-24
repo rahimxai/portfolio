@@ -17,3 +17,10 @@ __pycache__/
 
 # Local-only notes (PR drafts, scratch files)
 is-a-dev-record/
+
+# Wrangler / Cloudflare local artifacts
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
