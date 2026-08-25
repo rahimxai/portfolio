@@ -1,617 +1,648 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdul Rahim · AI Engineer</title>
-  <meta name="description" content="Portfolio of Abdul Rahim · AI Engineer at CareCloud. LLMs, RAG, multi-agent systems, computer vision." />
+  <meta name="description" content="Portfolio of Abdul Rahim · AI Engineer. LLMs, RAG, multi-agent systems, computer vision." />
   <link rel="icon" type="image/jpeg" href="assets/img/profile.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
   <!-- Navigation -->
-  <nav class="nav">
-    <a class="nav-brand" href="#hero">
-      <span class="brand-dot"></span>
-      <span>Abdul Rahim</span>
-    </a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a class="nav-cta" href="assets/docs/Abdul-Rahim-CV.pdf" target="_blank" rel="noopener">View CV</a>
+  <nav class="nav" id="navbar">
+    <a href="#hero" class="nav-brand">RAHIM.</a>
+    <ul class="nav-links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#education">EDUCATION</a></li>
+      <li><a href="#certifications">CERTIFICATIONS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="nav-cta" href="assets/docs/Abdul Rahim-AI Engineer.pdf" target="_blank" rel="noopener">VIEW CV</a>
   </nav>
 
-  <!-- HERO -->
-  <header id="hero" class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <div class="badge"><span class="pulse"></span> Available for opportunities</div>
-        <h1>Hi, I'm <span class="grad">Abdul Rahim</span><br />AI Engineer building <span class="grad">production-grade AI systems</span>.</h1>
-        <p class="lead">
-          AI Engineer with a Computer Science background, specializing in <strong>LLMs, RAG and
-          multi-agent systems</strong>. ~1 year at <strong>CareCloud</strong> · currently leading a
-          multi-agent <strong>Medical Coding Automation</strong> platform that touches CPT, ICD,
-          Modifiers, NCCI Edits, LCD/NCD and MIPS across the Healthcare RCM pipeline. I work with
-          LLM APIs, RAG, Vector DBs, LoRA fine-tuning, LangChain &amp; LangGraph · focused on
-          building production-ready, scalable AI solutions.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-ghost" href="#assistant" id="open-assistant-cta">Talk to my AI Assistant</a>
-          <a class="btn btn-ghost" href="https://github.com/rahimxai" target="_blank" rel="noopener">GitHub →</a>
-        </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="menu-link">ABOUT</a></li>
+      <li><a href="#skills" class="menu-link">SKILLS</a></li>
+      <li><a href="#experience" class="menu-link">EXPERIENCE</a></li>
+      <li><a href="#projects" class="menu-link">PROJECTS</a></li>
+      <li><a href="#education" class="menu-link">EDUCATION</a></li>
+      <li><a href="#certifications" class="menu-link">CERTIFICATIONS</a></li>
+      <li><a href="#contact" class="menu-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-photo">
+      <img src="assets/img/hero-bg.png" alt="Abdul Rahim" id="heroBgImg" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-vignette"></div>
+    <!-- Precision scan line -->
+    <div class="hero-scan" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-label">Building Production-Grade AI Systems</div>
+      <div class="hero-name" id="heroName">ABDUL<br>RAHIM</div>
+      <div class="hero-role">AN AI ENGINEER<span class="blink-cursor">_</span></div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">VIEW PROJECTS</a>
+        <a href="#assistant" class="btn-outline" id="open-assistant-cta">TALK TO AI ASSISTANT</a>
+        <a href="https://github.com/rahimxai" class="btn-outline" target="_blank" rel="noopener">GITHUB &rarr;</a>
       </div>
-      <div class="hero-portrait">
-        <div class="halo"></div>
-        <div class="ring ring-1"></div>
-        <div class="ring ring-2"></div>
-        <div class="ring ring-3"></div>
-        <div class="holo-cone" aria-hidden="true"></div>
-        <div class="orbit-dot dot-a"></div>
-        <div class="orbit-dot dot-b"></div>
-        <div class="orbit-dot dot-c"></div>
-        <div class="code-rain" aria-hidden="true">
-          <span>{ }</span><span>&lt;/&gt;</span><span>AI</span><span>LLM</span><span>RAG</span><span>CV</span><span>def</span><span>0x1F</span>
-        </div>
-        <img class="portrait-img" src="assets/img/My_Picture-removebg-preview.png" alt="Abdul Rahim"
-             onerror="this.onerror=null;this.src='assets/img/profile.jpeg';this.classList.add('fallback');" />
-        <div class="scanlines" aria-hidden="true"></div>
-        <div class="portrait-base-glow" aria-hidden="true"></div>
-        <div class="portrait-base" aria-hidden="true"></div>
+      <div class="hero-trust">
+        <span class="trust-dot"></span>Available to join immediately
       </div>
     </div>
-  </header>
+    <div class="hero-fade"></div>
+  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container two-col">
-      <div>
-        <span class="kicker">About</span>
-        <h2>AI Engineer focused on <span class="grad">real-world LLM impact</span>.</h2>
-        <p>
-          I'm an AI Engineer with a Computer Science background, specializing in <strong>LLMs, RAG and
-          multi-agent systems</strong>. I'm proficient in Python and have hands-on experience architecting
-          and fine-tuning models for domain-specific tasks · focused on shipping <em>production-ready,
-          scalable AI solutions</em>.
-        </p>
-        <p>
-          At <strong>CareCloud</strong> I lead engineering on a Medical Coding Automation product that
-          touches CPT, ICD, Modifier, NCCI Edits, LCD/NCD and MIPS in Revenue Cycle Management. Outside
-          of work my main builds are <em>ZenBuild</em> (AI floor-plan generator, FYP), <em>Bone Fracture
-          Detection</em>, and a fine-grained <em>Bird Classification</em> system.
-        </p>
-        <p>
-          Outside of project work, I stay curious about <strong>AI automation</strong>,
-          LLM-based knowledge assistants and scalable AI architecture.
-        </p>
+  <!-- Marquee Strip -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>LLMs</span><span class="dot">&loz;</span>
+      <span>RAG</span><span class="dot">&loz;</span>
+      <span>MCP</span><span class="dot">&loz;</span>
+      <span>MULTI-AGENT SYSTEMS</span><span class="dot">&loz;</span>
+      <span>LANGCHAIN</span><span class="dot">&loz;</span>
+      <span>LANGRAPH</span><span class="dot">&loz;</span>
+      <span>VECTOR DATABASES</span><span class="dot">&loz;</span>
+      <span>FINE-TUNING</span><span class="dot">&loz;</span>
+      <span>LORA</span><span class="dot">&loz;</span>
+      <span>COMPUTER VISION</span><span class="dot">&loz;</span>
+      <span>PYTORCH</span><span class="dot">&loz;</span>
+      <span>LLMs</span><span class="dot">&loz;</span>
+      <span>RAG</span><span class="dot">&loz;</span>
+      <span>MCP</span><span class="dot">&loz;</span>
+      <span>MULTI-AGENT SYSTEMS</span><span class="dot">&loz;</span>
+      <span>LANGCHAIN</span><span class="dot">&loz;</span>
+      <span>LANGRAPH</span><span class="dot">&loz;</span>
+      <span>VECTOR DATABASES</span><span class="dot">&loz;</span>
+      <span>FINE-TUNING</span><span class="dot">&loz;</span>
+      <span>LORA</span><span class="dot">&loz;</span>
+      <span>COMPUTER VISION</span><span class="dot">&loz;</span>
+      <span>PYTORCH</span><span class="dot">&loz;</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section about-section" id="about">
+    <div class="container">
+
+      <!-- Top row: intro + highlight card -->
+      <div class="about-intro reveal">
+        <div class="about-intro-text">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Crafting <em>Intelligent</em><br>AI Systems</h2>
+          <p class="about-text">AI Engineer specializing in <strong>LLMs, RAG, MCP and multi-agent systems</strong>. Currently building AI calling agents and automation systems in the healthcare domain. Previously led a multi-agent Medical Coding Automation system across a full RCM pipeline.</p>
+          <p class="about-text">I stay obsessed with scalable AI architecture, LLM-based knowledge systems, and pushing the boundary of what intelligent agents can automate.</p>
+        </div>
+        <div class="about-highlight-card">
+          <div class="ahc-label">Current Focus</div>
+          <div class="ahc-title">Healthcare AI<br>Automation</div>
+          <p class="ahc-text">Building AI calling agents and intelligent automation systems that remove manual bottlenecks from healthcare workflows.</p>
+          <a href="#projects" class="btn-primary" style="display:inline-flex;margin-top:8px">VIEW PROJECTS &rarr;</a>
+        </div>
       </div>
-      <div class="card highlight">
-        <h3>Quick facts</h3>
-        <ul class="facts">
-          <li><span>Role</span><strong>Junior AI Engineer · Team Lead</strong></li>
-          <li><span>Company</span><strong>CareCloud</strong></li>
-          <li><span>Education</span><strong>BS Computer Science · IST</strong></li>
-          <li><span>Location</span><strong>Islamabad, Pakistan</strong></li>
-        </ul>
-      </div>
+
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
+  <!-- Skills -->
+  <section class="section skills-section" id="skills">
     <div class="container">
-      <span class="kicker">Experience</span>
-      <h2>Career timeline</h2>
-      <div class="timeline">
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <div class="t-head">
-              <h3>Junior AI Engineer</h3>
-              <span class="t-tag">CareCloud · Aug 2025 – Present</span>
-            </div>
-            <ul class="bullets">
-              <li>Automated healthcare pipeline progressing from LLMs to <strong>RAG-based multi-agent systems</strong>.</li>
-              <li>Fine-tuned LLMs (LLaMA 3.3 + LoRA) to enhance domain-specific accuracy for medical data extraction.</li>
-              <li>Designed and optimized <strong>agent-specific prompts</strong> to refine complex clinical workflows.</li>
-              <li>Reduced manual data processing time by <strong>40%</strong> through automated workflows.</li>
-              <li>Acting as <strong>Team Lead</strong> · owning architecture, agent testing, and the accuracy roadmap.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <div class="t-head">
-              <h3>IT Intern</h3>
-              <span class="t-tag">CareCloud · Jun 2025 – Aug 2025</span>
-            </div>
-            <ul class="bullets">
-              <li>Contributed to the development of an <strong>AI-powered X-ray analysis system</strong>.</li>
-              <li>Assisted with data preprocessing and automation research to improve diagnostic tools.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="t-group">Education</div>
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <div class="t-head">
-              <h3>BS Computer Science</h3>
-              <span class="t-tag">Institute of Space Technology (IST), Islamabad · Nov 2021 – Aug 2025</span>
-            </div>
-            <p>Completed Final Year Project <strong>ZenBuild · AI-Powered Architectural Design</strong>: an end-to-end ML pipeline for automated floorplan generation with CNN-based room localization and layout prediction.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <span class="kicker">Projects</span>
-      <h2>Selected work</h2>
-      <p class="muted">Click <strong>Watch Demo</strong> on any card to play the project video.</p>
-
-      <!-- Spotlight: Medical Coding -->
-      <article class="project spotlight" data-youtube="IQxO8If6vcA" data-title="Medical Coding Automation · Demo">
-        <div class="project-media">
-          <div class="play-overlay" aria-label="Play demo">
-            <svg viewBox="0 0 24 24" width="64" height="64" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg>
-          </div>
-          <img class="yt-thumb" src="https://i.ytimg.com/vi/IQxO8If6vcA/hqdefault.jpg" alt="Medical Coding Automation demo thumbnail" loading="lazy"/>
-          <span class="badge-spotlight">⭐ Spotlight · Current Work</span>
-        </div>
-        <div class="project-body">
-          <h3>Medical Coding Automation <span class="muted-inline">- CareCloud (Internal)</span></h3>
-          <p>
-            A <strong>multi-agent LLM system</strong> automating medical coding inside the Revenue Cycle
-            Management pipeline. Each module (CPT, ICD, Modifier, NCCI Edits, LCD/NCD, MIPS) is handled
-            by a dedicated agent with its own prompt strategy and retrieval flow.
-          </p>
-          <ul class="bullets">
-            <li><strong>Architecture:</strong> LangChain + LangGraph multi-agent graph with agent-specific prompts.</li>
-            <li><strong>Retrieval:</strong> Semantic search over CPT &amp; ICD codes + descriptions via <strong>Vector DB</strong> (Pinecone / Qdrant) and PostgreSQL for structured lookup.</li>
-            <li><strong>Knowledge:</strong> LCD/NCD article matching, NCCI edits, and MIPS measures as retrievable sources.</li>
-            <li><strong>Fine-tuning:</strong> <strong>LLaMA 3.3</strong> fine-tuned with <strong>LoRA</strong> for extraction &amp; diagnosis prediction.</li>
-            <li><strong>Accuracy:</strong> CPT <strong>88%</strong>, Modifier <strong>86%</strong>, MIPS <strong>100%</strong>, ICD <strong>70%</strong> · actively optimizing ICD.</li>
-            <li><strong>Impact:</strong> Reduced manual data processing time by <strong>40%</strong>.</li>
-            <li><strong>Role:</strong> Joined as developer, now <strong>Team Lead</strong>.</li>
-          </ul>
-          <div class="chip-row">
-            <span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">LangChain</span>
-            <span class="chip">LangGraph</span><span class="chip">Vector DB</span><span class="chip">Pinecone</span>
-            <span class="chip">Qdrant</span><span class="chip">PostgreSQL</span>
-            <span class="chip">LoRA</span><span class="chip">LLaMA 3.3</span><span class="chip">Python</span>
-          </div>
-          <div class="project-actions">
-            <button class="btn btn-primary play-btn">▶ Watch Demo</button>
-            <span class="btn btn-ghost btn-disabled" title="Internal CareCloud product · code not public">🔒 Internal Product</span>
-          </div>
-        </div>
-      </article>
-
-      <div class="project-grid">
-
-        <!-- ZenBuild / FYP -->
-        <article class="project" data-youtube="prJfnCln1Ec" data-title="ZenBuild · FYP Demo">
-          <div class="project-media small">
-            <div class="play-overlay"><svg viewBox="0 0 24 24" width="56" height="56"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
-            <img class="yt-thumb" src="https://i.ytimg.com/vi/prJfnCln1Ec/hqdefault.jpg" alt="ZenBuild demo thumbnail" loading="lazy"/>
-          </div>
-          <div class="project-body">
-            <h3>ZenBuild · AI-Powered Architectural Design</h3>
-            <p class="muted">Final Year Project · Deep Learning &amp; Computer Vision · IST, 2025</p>
-            <p>
-              An end-to-end AI platform for <strong>automated 2D floorplan generation</strong>. Built on
-              an enhanced <strong>DeepLayout</strong> framework (Wu et al., 2019) trained on the <strong>RPLAN</strong>
-              dataset, with a four-module sequential neural pipeline
-              (<strong>Living → Continue → Wall → Location</strong>) and a vectorization engine that
-              turns pixel outputs into professional vector floorplans. A Flask web app on top lets
-              users design plans and renders rooms with realistic textures.
-            </p>
-            <ul class="bullets compact">
-              <li>Up to <strong>99.5%</strong> validation accuracy across the four modules.</li>
-              <li><strong>~8 seconds</strong> per design vs ~45 min of manual MATLAB drafting (<strong>300×</strong> faster).</li>
-              <li><strong>8/10 architects</strong> in user study would use the output as a starting point.</li>
-              <li>Scope: single-story residential, 60–120 m². Supports 2/3/4-room layouts (2_1, 2_2, 3_1, 3_2, 4_1, 4_2).</li>
-            </ul>
-            <div class="zb-gallery">
-              <figure><img src="assets/img/zenbuild/mask.png" alt="Predicted room mask" loading="lazy"/><figcaption>Predicted color-coded room mask</figcaption></figure>
-              <figure><img src="assets/img/zenbuild/rendered.png" alt="Final textured floorplan" loading="lazy"/><figcaption>Final textured floorplan</figcaption></figure>
-            </div>
-            <div class="chip-row">
-              <span class="chip">Python</span><span class="chip">PyTorch</span>
-              <span class="chip">CNN</span><span class="chip">Deep Learning</span>
-              <span class="chip">Computer Vision</span><span class="chip">Image Segmentation</span>
-              <span class="chip">DeepLayout</span><span class="chip">ResNet34</span>
-              <span class="chip">RPLAN Dataset</span><span class="chip">Vectorization</span>
-              <span class="chip">NumPy</span><span class="chip">Flask</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn btn-primary play-btn">▶ Watch Demo</button>
-              <a class="btn btn-ghost" href="https://github.com/rahimxai/AI-Powered-Architectural-Design" target="_blank" rel="noopener">View Code →</a>
-              <details class="more">
-                <summary>Know more</summary>
-                <div class="more-body">
-                  <p><strong>Pipeline:</strong> user-supplied boundary → multi-channel tensor → 4 specialized CNN modules (Living regression → Continue → Wall generator → Location) → vectorization engine → color-coded vector floorplan → texture overlay &amp; interior rendering.</p>
-                  <p><strong>Dataset &amp; backbone:</strong> RPLAN (thousands of real residential plans), ResNet-34 backbones inside the DeepLayout modules.</p>
-                  <p><strong>Web platform:</strong> Flask app with auth, interactive room designer, gallery and contact form.</p>
-                  <p><strong>Authors:</strong> Abdul Rahim &amp; Muhammad Zaryab. <strong>Supervisor:</strong> Ms. Ammara Yaseen. Institute of Space Technology, Islamabad · July 2025.</p>
-                  <p>For deeper details (thesis, research paper, poster) · just ask the AI Assistant.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-
-        <!-- Bone Fracture -->
-        <article class="project" data-youtube="_oQjLZyyfWo" data-title="Bone Fracture Detection · Demo">
-          <div class="project-media small">
-            <div class="play-overlay"><svg viewBox="0 0 24 24" width="56" height="56"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
-            <img class="yt-thumb" src="https://i.ytimg.com/vi/_oQjLZyyfWo/hqdefault.jpg" alt="Bone Fracture Detection demo thumbnail" loading="lazy"/>
-          </div>
-          <div class="project-body">
-            <h3>Bone Fracture Detection</h3>
-            <p class="muted">Computer Vision · Two-stage ResNet-50 X-ray classifier</p>
-            <p>
-              A two-stage CNN pipeline that decides whether an upper-limb X-ray shows a fracture.
-              <strong>Stage 1</strong> · a ResNet-50 body-part router picks Hand / Shoulder / Elbow.
-              <strong>Stage 2</strong> · a part-specialist ResNet-50 (one per part) outputs
-              <em>fractured</em> / <em>normal</em>. Ships as a CustomTkinter desktop GUI plus an
-              optional Flask web demo.
-            </p>
-            <ul class="bullets compact">
-              <li>Trained on the <strong>MURA</strong> dataset (Stanford ML Group) · 20,335 musculoskeletal radiographs.</li>
-              <li>Data augmentation (horizontal flips) + <strong>72/18/10</strong> train/val/test split.</li>
-              <li><strong>Adam</strong> optimizer (lr 1e-4) with <strong>early stopping</strong>.</li>
-              <li>Body-part classification accuracy: <strong>100%</strong> · Fracture detection accuracy: <strong>87.9%</strong>.</li>
-            </ul>
-            <div class="chip-row">
-              <span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">Keras</span>
-              <span class="chip">CNN</span><span class="chip">ResNet-50</span>
-              <span class="chip">Image Classification</span><span class="chip">Computer Vision</span>
-              <span class="chip">Transfer Learning</span>
-              <span class="chip">NumPy</span><span class="chip">Pandas</span>
-              <span class="chip">CustomTkinter</span><span class="chip">Flask</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn btn-primary play-btn">▶ Watch Demo</button>
-              <a class="btn btn-ghost" href="https://github.com/rahimxai/Bone-Fracture-Detection---AI" target="_blank" rel="noopener">View Code →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Bird -->
-        <article class="project" data-youtube="XNmjbvRUIfU" data-title="Bird Classification · Demo">
-          <div class="project-media small">
-            <div class="play-overlay"><svg viewBox="0 0 24 24" width="56" height="56"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
-            <img class="yt-thumb" src="https://i.ytimg.com/vi/XNmjbvRUIfU/hqdefault.jpg" alt="Bird classification demo thumbnail" loading="lazy"/>
-          </div>
-          <div class="project-body">
-            <h3>Fine-Grained Bird Classification</h3>
-            <p class="muted">Computer Vision · CUB-200-2011 · 200 species · ResNet-50 vs EfficientNet-B4</p>
-            <p>
-              Benchmarked four configurations on the CUB-200-2011 dataset (stratified 70/15/15 split,
-              fixed seed): ResNet-50 baseline, + bounding-box crop, + MixUp/CutMix, and finally an
-              EfficientNet-B4 trained in two phases (warm-up with frozen backbone → full fine-tune at
-              lower LR with MixUp + CutMix + label smoothing). <strong>Grad-CAM</strong> confirms the
-              model attends to bird body, head and wing regions · not the background.
-            </p>
-            <ul class="bullets compact">
-              <li>ResNet-50 baseline → <strong>82.18%</strong> Val Top-1 / <strong>95.93%</strong> Top-5.</li>
-              <li>+ bbox + MixUp / CutMix → <strong>96.55%</strong> Test Top-5 (best ResNet variant).</li>
-              <li>EfficientNet-B4 → strongest backbone, best overall.</li>
-              <li>Reproducible pipeline: dedicated scripts for data, training, eval, Grad-CAM and checkpointing.</li>
-            </ul>
-            <div class="chip-row">
-              <span class="chip">Python</span><span class="chip">PyTorch</span>
-              <span class="chip">CNN</span><span class="chip">Image Classification</span>
-              <span class="chip">Computer Vision</span><span class="chip">Transfer Learning</span>
-              <span class="chip">ResNet-50</span><span class="chip">EfficientNet-B4</span>
-              <span class="chip">MixUp</span><span class="chip">CutMix</span><span class="chip">Label Smoothing</span>
-              <span class="chip">Grad-CAM</span>
-            </div>
-            <div class="project-actions">
-              <button class="btn btn-primary play-btn">▶ Watch Demo</button>
-              <a class="btn btn-ghost" href="https://github.com/rahimxai/Bird-Classification" target="_blank" rel="noopener">View Code →</a>
-            </div>
-          </div>
-        </article>
-
+      <div class="section-header reveal">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">TECHNICAL <em>Skills</em></h2>
       </div>
 
-      <!-- Other projects -->
-      <div class="other-projects">
-        <h3>Other &amp; early academic work</h3>
-        <p class="muted">Coursework, OOP &amp; database projects, and small apps. Each has a public repo on my GitHub · click <strong>View Repo</strong> to browse the code.</p>
-        <div class="other-grid">
-          <a class="other-card" href="https://github.com/rahimxai/Database---Student-Management-System" target="_blank" rel="noopener">
-            <h4>Student Management System</h4>
-            <p>Python + MySQL backend with authentication, full CRUD, search and CSV export.</p>
-            <div class="chip-row"><span class="chip">Python</span><span class="chip">MySQL</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/Weather-Forecast-App" target="_blank" rel="noopener">
-            <h4>Weather Forecast App</h4>
-            <p>React Native mobile app with auth, multi-screen navigation, and real-time weather data integration.</p>
-            <div class="chip-row"><span class="chip">React Native</span><span class="chip">JS</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/Crypto-Analyzer-" target="_blank" rel="noopener">
-            <h4>Crypto Analyzer</h4>
-            <p>Crypto analytics platform with live tracking, historical charts and sorting algorithms for market-cap comparison.</p>
-            <div class="chip-row"><span class="chip">JavaScript</span><span class="chip">Charts</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/PHARMACY-MANAGEMENT-SYSTEM-Python-OOP-" target="_blank" rel="noopener">
-            <h4>Pharmacy Management System</h4>
-            <p>Python OOP system with billing and inventory automation.</p>
-            <div class="chip-row"><span class="chip">Python</span><span class="chip">OOP</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/University-Management-System-Python-" target="_blank" rel="noopener">
-            <h4>University Management System</h4>
-            <p>Custom doubly-linked-list implementation with full CRUD operations.</p>
-            <div class="chip-row"><span class="chip">Python</span><span class="chip">Data Structures</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/Tourism-Website-HTML-CSS-" target="_blank" rel="noopener">
-            <h4>Tourism Website</h4>
-            <p>Semantic HTML5 site with modern CSS styling.</p>
-            <div class="chip-row"><span class="chip">HTML5</span><span class="chip">CSS</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/Attendance-Management-System-Python-GUI-" target="_blank" rel="noopener">
-            <h4>Attendance Management System</h4>
-            <p>Python desktop app with a GUI for attendance tracking.</p>
-            <div class="chip-row"><span class="chip">Python</span><span class="chip">GUI</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/General-Store-Billing-System-Python-" target="_blank" rel="noopener">
-            <h4>General Store Billing System</h4>
-            <p>Python billing system for a retail store workflow.</p>
-            <div class="chip-row"><span class="chip">Python</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-          <a class="other-card" href="https://github.com/rahimxai/Software-Testing---Test-Cases" target="_blank" rel="noopener">
-            <h4>Software Testing · Test Cases</h4>
-            <p>Coursework on writing structured test cases and QA documents.</p>
-            <div class="chip-row"><span class="chip">Testing</span><span class="chip">QA</span></div>
-            <span class="other-link">View Repo →</span>
-          </a>
-        </div>
-        <div class="link-row" style="margin-top:1.2rem">
-          <a class="btn btn-ghost" href="https://github.com/rahimxai?tab=repositories" target="_blank" rel="noopener">All Repositories →</a>
-          <button class="btn btn-ghost" id="ask-more-btn">Ask the Assistant</button>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Capability cards -->
+      <div class="feat-grid reveal">
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <span class="kicker">Skills</span>
-      <h2>Technical skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4>Generative AI</h4>
-          <div class="chip-row">
-            <span class="chip">LLMs</span><span class="chip">RAG</span>
-            <span class="chip">Fine Tuning</span><span class="chip">LoRA</span>
-            <span class="chip">Prompt Engineering</span>
-            <span class="chip">LangChain</span><span class="chip">LangGraph</span>
-            <span class="chip">Multi-Agent Systems</span>
+        <div class="feat-card">
+          <div class="feat-card-header"><div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 1-6.23-.693L4 14.5m15.8.8 1.402 1.402c1 1 .03 2.798-1.414 2.798H4.212c-1.445 0-2.414-1.798-1.414-2.798L4 14.5"/></svg>
+          </div><h3>Generative AI</h3></div>
+          <div class="chip-row" style="margin-top:12px;margin-bottom:0">
+            <span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">MCP</span>
+            <span class="chip">Fine Tuning</span><span class="chip">LangChain</span>
+            <span class="chip">LangGraph</span><span class="chip">Prompt Engineering</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h4>Machine &amp; Deep Learning</h4>
-          <div class="chip-row">
+
+        <div class="feat-card">
+          <div class="feat-card-header"><div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div><h3>Machine Learning &amp; Deep Learning</h3></div>
+          <div class="chip-row" style="margin-top:12px;margin-bottom:0">
             <span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
             <span class="chip">CNNs</span><span class="chip">Neural Networks</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h4>Computer Vision</h4>
-          <div class="chip-row">
+
+        <div class="feat-card">
+          <div class="feat-card-header"><div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div><h3>Computer Vision</h3></div>
+          <div class="chip-row" style="margin-top:12px;margin-bottom:0">
             <span class="chip">Image Classification</span>
             <span class="chip">Image Segmentation</span>
             <span class="chip">Feature Extraction</span>
           </div>
         </div>
-        <div class="skill-card">
-          <h4>Databases</h4>
-          <div class="chip-row">
-            <span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
-            <span class="chip">Pinecone</span><span class="chip">Qdrant</span>
-            <span class="chip">Vector Databases</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h4>Deployment / APIs</h4>
-          <div class="chip-row">
-            <span class="chip">FastAPI</span><span class="chip">Flask</span>
-            <span class="chip">Docker</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h4>Programming, Web &amp; Tools</h4>
-          <div class="chip-row">
+
+        <div class="feat-card">
+          <div class="feat-card-header"><div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25z"/></svg>
+          </div><h3>Programming &amp; Tools</h3></div>
+          <div class="chip-row" style="margin-top:12px;margin-bottom:0">
             <span class="chip">Python</span>
             <span class="chip">HTML</span><span class="chip">CSS</span>
             <span class="chip">Git</span><span class="chip">GitHub</span>
           </div>
         </div>
+
+        <div class="feat-card">
+          <div class="feat-card-header"><div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5"/><path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"/></svg>
+          </div><h3>Databases</h3></div>
+          <div class="chip-row" style="margin-top:12px;margin-bottom:0">
+            <span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
+            <span class="chip">Pinecone</span><span class="chip">Qdrant</span>
+            <span class="chip">Vector Databases</span>
+          </div>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-card-header"><div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 6 0m-6 0H3m16.5 0a3 3 0 0 0 3-3m-3 3a3 3 0 1 1-6 0m6 0h1.5m-7.5 0V5.625"/></svg>
+          </div><h3>Deployment / APIs</h3></div>
+          <div class="chip-row" style="margin-top:12px;margin-bottom:0">
+            <span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Docker</span>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates" class="section">
+  <!-- Experience -->
+  <section class="section experience-section" id="experience">
     <div class="container">
-      <span class="kicker">Certificates</span>
-      <h2>Credentials</h2>
-      <div class="cert-grid">
-        <a class="cert-card" href="assets/docs/CareCloud-Certificate.pdf" target="_blank" rel="noopener">
-          <div class="cert-icon">📄</div>
-          <div>
-            <h4>CareCloud Certificate</h4>
-            <p class="muted">Internship · AI / IT</p>
-          </div>
-        </a>
-        <a class="cert-card" href="assets/docs/FPCDL-Certificate.pdf" target="_blank" rel="noopener">
-          <div class="cert-icon">📄</div>
-          <div>
-            <h4>FPCDL Certificate</h4>
-            <p class="muted">Computer Science Training</p>
-          </div>
-        </a>
+      <div class="section-header reveal">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">WORK <em>Experience</em></h2>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container contact-wrap">
-      <div>
-        <span class="kicker">Contact</span>
-        <h2>Let's build something.</h2>
-        <p>
-          Open to AI Engineer / ML Engineer / LLM Engineer roles · remote or hybrid. Reach out for
-          collaborations, freelance work, or a quick chat about LLM systems and healthcare AI.
-        </p>
-        <ul class="contact-list">
-          <li><span>✉️</span><a href="mailto:rahimxofficial@gmail.com">rahimxofficial@gmail.com</a></li>
-          <li><span>📞</span><a href="tel:+923167955682">+92 316 7955682</a></li>
-          <li><span>📍</span>Islamabad, Pakistan</li>
-          <li><span>💼</span><a href="https://www.linkedin.com/in/abdul-rahim-2a12b8302" target="_blank" rel="noopener">linkedin.com/in/abdul-rahim-2a12b8302</a></li>
-          <li><span>💻</span><a href="https://github.com/rahimxai" target="_blank" rel="noopener">github.com/rahimxai</a></li>
-        </ul>
-        <div class="link-row">
-          <a class="btn btn-primary" href="mailto:rahimxofficial@gmail.com">Email Me</a>
-          <a class="btn btn-ghost" href="assets/docs/Abdul-Rahim-CV.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
+      <div class="timeline">
+        <!-- Reporteq — current role -->
+        <div class="t-item reveal">
+          <div class="t-year">Jul 2026<br>&mdash;<br>Present</div>
+          <div>
+            <div class="t-role">AI Engineer</div>
+            <div class="t-company">Reporteq &middot; Islamabad, Pakistan</div>
+            <ul class="t-bullets">
+              <li>Contributed to the development of an <strong>AI calling agent</strong> for document follow-up.</li>
+              <li>Added real-time <strong>SWAIG function</strong> to resend documents on live calls.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">Aug 2025<br>&mdash;<br>Jul 2026</div>
+          <div>
+            <div class="t-role">Junior AI Engineer</div>
+            <div class="t-company">CareCloud &middot; Islamabad, Pakistan</div>
+            <ul class="t-bullets">
+              <li>Architecting a <strong>multi-agent LLM system</strong> automating the full healthcare RCM coding pipeline (CPT, ICD, Modifier, NCCI, LCD/NCD, MIPS).</li>
+              <li>Fine-tuned <strong>LLaMA 3.3 with LoRA</strong> for domain-specific medical data extraction.</li>
+              <li>Designed agent-specific prompts and RAG flows over Pinecone/Qdrant + PostgreSQL.</li>
+              <li>Reduced manual data processing time by <strong>40%</strong>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">Jun &ndash;<br>Aug 2025</div>
+          <div>
+            <div class="t-role">AI Intern</div>
+            <div class="t-company">CareCloud &middot; Islamabad, Pakistan</div>
+            <ul class="t-bullets">
+              <li>Contributed to an <strong>AI-powered X-ray analysis system</strong>.</li>
+              <li>Data preprocessing and automation research to improve diagnostic tools.</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <h3>Open to</h3>
-        <ul class="facts">
-          <li><span>Roles</span><strong>AI · ML · LLM · Computer Vision Engineer</strong></li>
-          <li><span>Mode</span><strong>Remote · Hybrid · Onsite</strong></li>
-          <li><span>Location</span><strong>Islamabad, PK</strong></li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">SELECTED <em>Projects</em></h2>
+        <p class="section-sub">Click <strong>Watch Demo</strong> on any card to play the project video.</p>
+      </div>
+
+      <!-- 4-column equal project grid -->
+      <div class="project-grid">
+
+        <!-- Medical Coding -->
+        <article class="proj-card reveal" data-youtube="xBU6hvR0EW0" data-title="Medical Coding Automation &middot; Demo">
+          <div class="proj-spec-tape"><span class="proj-status-dot internal"></span>INTERNAL &nbsp;/&nbsp; PRODUCTION &nbsp;/&nbsp; HEALTHCARE RCM</div>
+          <div class="proj-thumb">
+            <div class="play-overlay"><svg viewBox="0 0 24 24" width="48" height="48"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
+            <img src="https://i.ytimg.com/vi/xBU6hvR0EW0/hqdefault.jpg" alt="Medical Coding Automation demo" loading="lazy" />
+            <span class="badge-spotlight">&#9733; Current Work</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tag">CareCloud &middot; Internal</div>
+            <div class="proj-title">Medical Coding Automation</div>
+            <button class="card-toggle" aria-expanded="false"><span class="toggle-label">Know More</span><svg class="toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="card-expand">
+              <p class="proj-desc">A <strong>multi-agent LLM system</strong> automating medical coding inside the Revenue Cycle Management pipeline. Each module (CPT, ICD, Modifier, NCCI Edits, LCD/NCD, MIPS) is handled by a dedicated agent with its own prompt strategy and retrieval flow.</p>
+              <ul class="proj-bullets">
+                <li><strong>Architecture:</strong> LangChain + LangGraph multi-agent graph with agent-specific prompts.</li>
+                <li><strong>Retrieval:</strong> Semantic search over CPT &amp; ICD via <strong>Vector DB</strong> (Pinecone / Qdrant) and PostgreSQL.</li>
+                <li><strong>Knowledge:</strong> LCD/NCD article matching, NCCI edits, and MIPS measures as retrievable sources.</li>
+                <li><strong>Fine-tuning:</strong> <strong>LLaMA 3.3</strong> fine-tuned with <strong>LoRA</strong> for extraction &amp; diagnosis prediction.</li>
+                <li><strong>Accuracy:</strong> CPT <strong>88%</strong> &middot; Modifier <strong>86%</strong> &middot; MIPS <strong>100%</strong> &middot; ICD <strong>70%</strong>.</li>
+                <li><strong>Impact:</strong> Reduced manual processing time by <strong>40%</strong>.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">LangChain</span>
+                <span class="chip">LangGraph</span><span class="chip">Vector DB</span><span class="chip">Pinecone</span>
+                <span class="chip">Qdrant</span><span class="chip">LoRA</span><span class="chip">LLaMA 3.3</span><span class="chip">Python</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn-primary play-btn">&#9654; Watch Demo</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ZenBuild -->
+        <article class="proj-card reveal" data-youtube="prJfnCln1Ec" data-title="ZenBuild &middot; FYP Demo">
+          <div class="proj-spec-tape"><span class="proj-status-dot"></span>OPEN SOURCE &nbsp;/&nbsp; DEEP LEARNING &nbsp;/&nbsp; FYP</div>
+          <div class="proj-thumb">
+            <div class="play-overlay"><svg viewBox="0 0 24 24" width="48" height="48"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
+            <img src="https://i.ytimg.com/vi/prJfnCln1Ec/hqdefault.jpg" alt="ZenBuild demo" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-tag">Final Year Project</div>
+            <div class="proj-title">ZenBuild &mdash; AI Architectural Design</div>
+            <button class="card-toggle" aria-expanded="false"><span class="toggle-label">Know More</span><svg class="toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="card-expand">
+              <p class="proj-desc">An end-to-end AI platform for <strong>automated 2D floorplan generation</strong>. Built on an enhanced <strong>DeepLayout</strong> framework trained on the <strong>RPLAN</strong> dataset, with a four-module sequential neural pipeline (<strong>Living &rarr; Continue &rarr; Wall &rarr; Location</strong>) and a vectorization engine that turns pixel outputs into professional vector floorplans. A Flask web app renders rooms with realistic textures.</p>
+              <ul class="proj-bullets">
+                <li>Up to <strong>99.5%</strong> validation accuracy across the four modules.</li>
+                <li><strong>~8 seconds</strong> per design vs ~45 min of manual MATLAB drafting (<strong>300&times;</strong> faster).</li>
+                <li><strong>8/10 architects</strong> in user study would use the output as a starting point.</li>
+                <li>Scope: single-story residential, 60&ndash;120 m&sup2;. Supports 2/3/4-room layouts.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">PyTorch</span><span class="chip">CNN</span><span class="chip">Deep Learning</span>
+                <span class="chip">Computer Vision</span><span class="chip">ResNet34</span>
+                <span class="chip">DeepLayout</span><span class="chip">RPLAN</span><span class="chip">Flask</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn-primary play-btn">&#9654; Watch Demo</button>
+                <a class="btn-outline" href="https://github.com/rahimxai/AI-Powered-Architectural-Design" target="_blank" rel="noopener">Code &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bone Fracture -->
+        <article class="proj-card reveal" data-youtube="_oQjLZyyfWo" data-title="Bone Fracture Detection &middot; Demo">
+          <div class="proj-spec-tape"><span class="proj-status-dot"></span>OPEN SOURCE &nbsp;/&nbsp; COMPUTER VISION &nbsp;/&nbsp; MEDICAL AI</div>
+          <div class="proj-thumb">
+            <div class="play-overlay"><svg viewBox="0 0 24 24" width="48" height="48"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
+            <img src="https://i.ytimg.com/vi/_oQjLZyyfWo/hqdefault.jpg" alt="Bone Fracture Detection demo" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-tag">Computer Vision</div>
+            <div class="proj-title">Bone Fracture Detection</div>
+            <button class="card-toggle" aria-expanded="false"><span class="toggle-label">Know More</span><svg class="toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="card-expand">
+              <p class="proj-desc">A two-stage CNN pipeline deciding whether an upper-limb X-ray shows a fracture. <strong>Stage 1</strong> &mdash; a ResNet-50 body-part router picks Hand / Shoulder / Elbow. <strong>Stage 2</strong> &mdash; a part-specialist ResNet-50 outputs <em>fractured</em> / <em>normal</em>. Ships as a CustomTkinter desktop GUI plus an optional Flask web demo.</p>
+              <ul class="proj-bullets">
+                <li>Trained on the <strong>MURA</strong> dataset (Stanford ML Group) &middot; 20,335 musculoskeletal radiographs.</li>
+                <li>Data augmentation (horizontal flips) + <strong>72/18/10</strong> train/val/test split.</li>
+                <li><strong>Adam</strong> optimizer (lr 1e-4) with <strong>early stopping</strong>.</li>
+                <li>Body-part accuracy: <strong>100%</strong> &middot; Fracture detection accuracy: <strong>87.9%</strong>.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">ResNet-50</span>
+                <span class="chip">Transfer Learning</span><span class="chip">Computer Vision</span>
+                <span class="chip">CustomTkinter</span><span class="chip">Flask</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn-primary play-btn">&#9654; Watch Demo</button>
+                <a class="btn-outline" href="https://github.com/rahimxai/Bone-Fracture-Detection---AI" target="_blank" rel="noopener">Code &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bird Classification -->
+        <article class="proj-card reveal" data-youtube="XNmjbvRUIfU" data-title="Bird Classification &middot; Demo">
+          <div class="proj-spec-tape"><span class="proj-status-dot"></span>OPEN SOURCE &nbsp;/&nbsp; COMPUTER VISION &nbsp;/&nbsp; BENCHMARK</div>
+          <div class="proj-thumb">
+            <div class="play-overlay"><svg viewBox="0 0 24 24" width="48" height="48"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.4)" stroke="#fff" stroke-width="1.2"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
+            <img src="https://i.ytimg.com/vi/XNmjbvRUIfU/hqdefault.jpg" alt="Bird Classification demo" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <div class="proj-tag">Computer Vision</div>
+            <div class="proj-title">Fine-Grained Bird Classification</div>
+            <button class="card-toggle" aria-expanded="false"><span class="toggle-label">Know More</span><svg class="toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="card-expand">
+              <p class="proj-desc">Benchmarked four configurations on the <strong>CUB-200-2011</strong> dataset (200 species, stratified 70/15/15 split): ResNet-50 baseline, + bbox crop, + MixUp/CutMix, and EfficientNet-B4 trained in two phases (warm-up + full fine-tune with label smoothing). <strong>Grad-CAM</strong> confirms the model attends to bird body, head and wing &mdash; not background.</p>
+              <ul class="proj-bullets">
+                <li>ResNet-50 baseline &rarr; <strong>82.18%</strong> Val Top-1 / <strong>95.93%</strong> Top-5.</li>
+                <li>+ bbox + MixUp/CutMix &rarr; <strong>96.55%</strong> Test Top-5 (best ResNet variant).</li>
+                <li>EfficientNet-B4 &rarr; strongest backbone, best overall.</li>
+                <li>Reproducible pipeline: scripts for data, training, eval, Grad-CAM and checkpointing.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">PyTorch</span><span class="chip">ResNet-50</span><span class="chip">EfficientNet-B4</span>
+                <span class="chip">MixUp</span><span class="chip">CutMix</span><span class="chip">Label Smoothing</span>
+                <span class="chip">Grad-CAM</span><span class="chip">Transfer Learning</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn-primary play-btn">&#9654; Watch Demo</button>
+                <a class="btn-outline" href="https://github.com/rahimxai/Bird-Classification" target="_blank" rel="noopener">Code &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Other projects -->
+      <div class="reveal">
+        <div class="other-section-head">Other &amp; Early Academic Work</div>
+        <p class="other-section-sub">Coursework, OOP &amp; database projects. Each has a public repo on GitHub.</p>
+        <div class="other-grid">
+          <a class="other-card" href="https://github.com/rahimxai/Database---Student-Management-System" target="_blank" rel="noopener">
+            <h4>Student Management System</h4>
+            <p>Python + MySQL backend with full CRUD, search and CSV export.</p>
+            <div class="chip-row"><span class="chip">Python</span><span class="chip">MySQL</span></div>
+            <span class="other-link">View Repo &rarr;</span>
+          </a>
+          <a class="other-card" href="https://github.com/rahimxai/Weather-Forecast-App" target="_blank" rel="noopener">
+            <h4>Weather Forecast App</h4>
+            <p>React Native app with multi-screen navigation and real-time weather data.</p>
+            <div class="chip-row"><span class="chip">React Native</span><span class="chip">JS</span></div>
+            <span class="other-link">View Repo &rarr;</span>
+          </a>
+          <a class="other-card" href="https://github.com/rahimxai/Crypto-Analyzer-" target="_blank" rel="noopener">
+            <h4>Crypto Analyzer</h4>
+            <p>Live crypto tracking with historical charts and market-cap sorting.</p>
+            <div class="chip-row"><span class="chip">JavaScript</span><span class="chip">Charts</span></div>
+            <span class="other-link">View Repo &rarr;</span>
+          </a>
+          <a class="other-card" href="https://github.com/rahimxai/PHARMACY-MANAGEMENT-SYSTEM-Python-OOP-" target="_blank" rel="noopener">
+            <h4>Pharmacy Management System</h4>
+            <p>Python OOP system with billing and inventory automation.</p>
+            <div class="chip-row"><span class="chip">Python</span><span class="chip">OOP</span></div>
+            <span class="other-link">View Repo &rarr;</span>
+          </a>
+          <a class="other-card" href="https://github.com/rahimxai/University-Management-System-Python-" target="_blank" rel="noopener">
+            <h4>University Management System</h4>
+            <p>Doubly-linked-list implementation with full CRUD operations.</p>
+            <div class="chip-row"><span class="chip">Python</span><span class="chip">Data Structures</span></div>
+            <span class="other-link">View Repo &rarr;</span>
+          </a>
+          <a class="other-card" href="https://github.com/rahimxai/Attendance-Management-System-Python-GUI-" target="_blank" rel="noopener">
+            <h4>Attendance Management System</h4>
+            <p>Python desktop GUI app for attendance tracking.</p>
+            <div class="chip-row"><span class="chip">Python</span><span class="chip">GUI</span></div>
+            <span class="other-link">View Repo &rarr;</span>
+          </a>
+        </div>
+        <div class="link-row">
+          <a class="btn-outline" href="https://github.com/rahimxai?tab=repositories" target="_blank" rel="noopener">ALL REPOSITORIES &rarr;</a>
+          <button class="btn-ghost" id="ask-more-btn">Ask the Assistant</button>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Education -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Academic</div>
+        <h2 class="section-title">EDUCATION</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-year">2021 &ndash;<br>Aug 2025</div>
+          <div>
+            <div class="t-role">BS Computer Science</div>
+            <div class="t-company">Institute of Space Technology (IST) &middot; Islamabad</div>
+            <p class="t-note">Final Year Project: <strong>ZenBuild &mdash; AI-Powered Architectural Design</strong> &mdash; an end-to-end deep learning pipeline for automated 2D floorplan generation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Credentials</div>
+        <h2 class="section-title">CERTIFICATIONS</h2>
+      </div>
+      <div class="cert-grid">
+        <a class="cert-card reveal" href="assets/docs/CareCloud-Certificate.pdf" target="_blank" rel="noopener">
+          <div class="cert-icon">&#128196;</div>
+          <div>
+            <div class="cert-title">CareCloud Certificate</div>
+            <div class="cert-sub">Internship &middot; AI / IT &middot; 2024</div>
+            <div class="cert-link">View Certificate &rarr;</div>
+          </div>
+        </a>
+        <a class="cert-card reveal" href="assets/docs/FPCDL-Certificate.pdf" target="_blank" rel="noopener">
+          <div class="cert-icon">&#128196;</div>
+          <div>
+            <div class="cert-title">FPCDL Certificate</div>
+            <div class="cert-sub">Computer Science Training</div>
+            <div class="cert-link">View Certificate &rarr;</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact-section" id="contact">
+    <div class="contact-bg-text" aria-hidden="true">CONTACT</div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">LET&rsquo;S <em>Build Together</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <h2 class="contact-heading">Open to <em>AI &amp; ML</em><br>Opportunities</h2>
+          <div class="contact-details">
+            <a href="mailto:rahimxofficial@gmail.com" class="contact-item">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+              rahimxofficial@gmail.com
+            </a>
+            <a href="tel:+923167955682" class="contact-item">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.57a16 16 0 0 0 6 6l1.94-1.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              +92 316 7955682
+            </a>
+            <span class="contact-item">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Islamabad, Pakistan
+            </span>
+          </div>
+          <div class="social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/abdul-rahim-2a12b8302" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a class="social-link" href="https://github.com/rahimxai" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a class="social-link" href="mailto:rahimxofficial@gmail.com" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="What's this about?" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                <span class="btn-text">SEND MESSAGE</span>
+                <span class="btn-arrow">&rarr;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Abdul Rahim · AI Engineer · Islamabad, Pakistan</span>
+    <div class="container">
+      <div class="footer-row">
+        <span class="footer-role">AI ENGINEER</span>
+        <div class="footer-socials">
+          <a href="https://github.com/rahimxai" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abdul-rahim-2a12b8302" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:rahimxofficial@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          </a>
+        </div>
+        <span class="footer-copy">&copy; <span id="year"></span> Abdul Rahim. All rights reserved.</span>
+      </div>
     </div>
   </footer>
 
-  <!-- VIDEO MODAL -->
+  <!-- Video Modal -->
   <div class="modal" id="video-modal" aria-hidden="true">
     <div class="modal-backdrop" data-close></div>
     <div class="modal-content">
-      <button class="modal-close" data-close aria-label="Close">✕</button>
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
       <h3 id="modal-title">Demo</h3>
       <video id="modal-video" controls playsinline style="display:none"></video>
       <iframe id="modal-iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
     </div>
   </div>
 
-  <!-- AI ASSISTANT (floating) -->
+  <!-- AI Assistant FAB -->
   <button class="assistant-fab" id="assistant-fab" aria-label="Open AI Assistant">
     <span class="fab-pulse"></span>
-    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
       <path d="M12 2a7 7 0 0 0-7 7v3.59L3.3 14.3a1 1 0 0 0 .7 1.7H8v1a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3v-1h4a1 1 0 0 0 .7-1.7L19 12.59V9a7 7 0 0 0-7-7Zm-2 8a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" fill="currentColor"/>
     </svg>
-    <span class="fab-label">Ask AI</span>
+    <span class="fab-label">ASK AI</span>
   </button>
 
+  <!-- AI Assistant Panel -->
   <section id="assistant" class="assistant-panel" aria-hidden="true">
     <div class="assistant-header">
       <div class="assistant-title">
         <div class="avatar-mini">
-          <svg viewBox="0 0 60 60" width="32" height="32"><circle cx="30" cy="30" r="28" fill="#6366f1"/><circle cx="22" cy="26" r="3" fill="#fff"/><circle cx="38" cy="26" r="3" fill="#fff"/><path d="M22 38 Q30 44 38 38" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 60 60" width="32" height="32"><circle cx="30" cy="30" r="28" fill="#cc1111"/><circle cx="22" cy="26" r="3" fill="#fff"/><circle cx="38" cy="26" r="3" fill="#fff"/><path d="M22 38 Q30 44 38 38" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
         </div>
         <div>
-          <strong>Rahim's AI Assistant</strong>
-          <span class="muted small" id="assistant-status">Online · Ask me anything about Abdul</span>
+          <strong>Rahim&rsquo;s AI Assistant</strong>
+          <span class="muted small" id="assistant-status">Online &middot; Ask me anything about Abdul</span>
         </div>
       </div>
       <div class="assistant-actions">
-        <button id="mute-btn" class="icon-btn" title="Toggle voice">🔊</button>
-        <button id="close-assistant" class="icon-btn" title="Close">✕</button>
+        <button id="mute-btn" class="icon-btn" title="Toggle voice">&#128266;</button>
+        <button id="close-assistant" class="icon-btn" title="Close">&times;</button>
       </div>
     </div>
-
     <div class="assistant-body">
-      <div class="avatar-stage">
-        <svg viewBox="0 0 200 200" class="avatar-svg" id="avatar-svg">
-          <defs>
-            <radialGradient id="aura" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="face" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#7c3aed"/>
-              <stop offset="100%" stop-color="#22d3ee"/>
-            </linearGradient>
-          </defs>
-          <circle cx="100" cy="100" r="95" fill="url(#aura)" class="avatar-aura"/>
-          <circle cx="100" cy="100" r="62" fill="url(#face)" class="avatar-face"/>
-          <g class="eyes">
-            <ellipse cx="82" cy="92" rx="6" ry="8" fill="#fff" class="eye eye-l"/>
-            <ellipse cx="118" cy="92" rx="6" ry="8" fill="#fff" class="eye eye-r"/>
-            <circle cx="82" cy="94" r="3" fill="#0f172a"/>
-            <circle cx="118" cy="94" r="3" fill="#0f172a"/>
-          </g>
-          <path id="mouth" d="M82 122 Q100 130 118 122" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <circle cx="100" cy="100" r="75" fill="none" stroke="#a78bfa" stroke-width="2" class="sound-ring sr1"/>
-          <circle cx="100" cy="100" r="85" fill="none" stroke="#a78bfa" stroke-width="1.5" class="sound-ring sr2"/>
-        </svg>
-        <div class="avatar-caption" id="avatar-caption">Hi! I'm Rahim's assistant. Ask me anything.</div>
-      </div>
-
       <div class="chat" id="chat">
         <div class="msg bot">
-          <p>👋 Hi! I'm <strong>Rahim's AI assistant</strong>. Ask me about his experience, projects, skills, education, or how to get in touch. Try:</p>
+          <p>&#128075; Hi! I&rsquo;m <strong>Rahim&rsquo;s AI assistant</strong>. Ask me about his current work at Reporteq, projects, skills, or how to get in touch. Try:</p>
           <div class="quick-replies">
+            <button class="qr">What are you working on now?</button>
             <button class="qr">Tell me about your experience</button>
-            <button class="qr">How soon can you join?</button>
+            <button class="qr">When can you join?</button>
             <button class="qr">Where are you located?</button>
             <button class="qr">What roles are you open to?</button>
-            <button class="qr">What languages do you code in?</button>
             <button class="qr">Tell me about the Medical Coding project</button>
-            <button class="qr">What's the FYP about?</button>
-            <button class="qr">Education?</button>
-            <button class="qr">How can I contact you?</button>
+            <button class="qr">What&rsquo;s the FYP about?</button>
           </div>
         </div>
       </div>
-
-      <form class="chat-input" id="chat-form">
-        <input id="chat-text" type="text" placeholder="Ask about Rahim's work, projects, skills…" autocomplete="off" />
-        <button type="submit" class="btn btn-primary">Send</button>
+      <form class="chat-input" id="chat-form" autocomplete="off">
+        <input type="text" id="chat-text" placeholder="Ask anything about Abdul..." />
+        <button type="submit" class="send-btn" aria-label="Send">&#10148;</button>
       </form>
     </div>
   </section>
 
-  <script src="chatbot.js?v=4"></script>
-  <script src="script.js?v=4"></script>
+  <script src="chatbot.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
       id: 'greet',
       priority: 1,
       triggers: ['hi', 'hello', 'hey', 'salam', 'assalam', 'greetings', 'good morning', 'good evening'],
-      answer: `Hi there! 👋 I'm Rahim's AI assistant. Ask me about his current work at CareCloud, his projects, skills, education, or how to reach him.`
+      answer: `Hi there! 👋 I'm Rahim's AI assistant. Ask me about his current work at Reporteq, his projects, skills, education, or how to reach him.`
     },
     {
       id: 'thanks',
@@ -28,17 +28,30 @@
       id: 'about',
       priority: 5,
       triggers: ['who is', 'who are you', 'about him', 'about rahim', 'about abdul', 'tell me about him', 'tell me about rahim', 'introduce', 'summary', 'professional summary'],
-      answer: `**Abdul Rahim** is an AI Engineer with a Computer Science background, specializing in **LLMs, RAG and multi-agent systems**. He's proficient in Python and experienced architecting and fine-tuning models for domain-specific tasks · focused on production-ready, scalable AI.
+      answer: `**Abdul Rahim** is an AI Engineer with a Computer Science background, specializing in **LLMs, RAG, MCP and multi-agent systems**. He's proficient in Python and experienced in architecting and fine-tuning models for domain-specific tasks · focused on production-ready, scalable AI.
 
-He works as **Junior AI Engineer at CareCloud, Islamabad**, and leads engineering on the Medical Coding Automation product (an internal RCM module).`
+Currently working as **AI Engineer at Reporteq, Islamabad** — developing an AI calling agent for document follow-up and adding real-time SWAIG functions to live calls. Previously led engineering at **CareCloud** on a multi-agent Medical Coding Automation product.`
     },
 
-    /* ---------- Medical Coding (main project) ---------- */
+    /* ---------- Reporteq / current work ---------- */
+    {
+      id: 'reporteq',
+      priority: 10,
+      triggers: ['reporteq', 'current work', 'current job', 'current project', 'main project', 'what are you working on', 'what do you do now', 'swaig', 'calling agent', 'ai calling', 'document follow', 'live call'],
+      answer: `Rahim currently works as **AI Engineer at Reporteq** (Jul 2026 – Present).
+
+• Contributed to the development of an **AI calling agent** for document follow-up.
+• Added real-time **SWAIG function** to resend documents on live calls.
+
+This is in the healthcare domain — building intelligent voice/call automation systems.`
+    },
+
+    /* ---------- Medical Coding (CareCloud) ---------- */
     {
       id: 'medical_coding',
       priority: 10,
-      triggers: ['medical coding', 'medical coding automation', 'current project', 'current work', 'main project', 'spotlight', 'carecloud project', 'rcm', 'revenue cycle', 'cpt', 'icd', 'modifier', 'modifiers', 'ncci', 'lcd', 'ncd', 'mips', 'main work', 'work at carecloud'],
-      answer: `**Medical Coding Automation** · Rahim's main work at CareCloud (internal product, not public yet).
+      triggers: ['medical coding', 'medical coding automation', 'carecloud project', 'rcm', 'revenue cycle', 'cpt', 'icd', 'modifier', 'modifiers', 'ncci', 'lcd', 'ncd', 'mips', 'main work', 'work at carecloud', 'previous project', 'carecloud work'],
+      answer: `**Medical Coding Automation** · Rahim's work at CareCloud (Aug 2025 – Jul 2026, internal product).
 
 It's a **multi-agent LLM system** automating medical coding inside the Revenue Cycle Management pipeline. Each module · **CPT, ICD, Modifier, NCCI Edits, LCD/NCD, and MIPS** · has its own dedicated agent with prompt strategy and retrieval flow.
 
@@ -48,7 +61,7 @@ It's a **multi-agent LLM system** automating medical coding inside the Revenue C
 
 **Accuracy:** CPT **88%**, Modifier **86%**, MIPS **100%** (measure-based), ICD **70%** · actively improving ICD.
 **Impact:** Reduced manual data processing time by **40%**.
-**Role:** Joined as developer, now acting **Team Lead**.`
+**Role:** Joined as developer, progressed to acting Team Lead before moving to Reporteq.`
     },
     {
       id: 'accuracy',
@@ -176,7 +189,7 @@ All repos: https://github.com/rahimxai?tab=repositories`
       triggers: ['skill', 'skills', 'tech stack', 'tech', 'technology', 'technologies', 'what do you use', 'what tools', 'expertise', 'know how', 'languages you', 'frameworks'],
       answer: `Rahim's technical skills:
 
-• **Generative AI:** LLMs, RAG, Fine Tuning, LoRA, Prompt Engineering, LangChain, LangGraph, Multi-Agent Systems.
+• **Generative AI:** LLMs, RAG, MCP, Fine Tuning, LoRA, Prompt Engineering, LangChain, LangGraph, Multi-Agent Systems.
 • **ML / DL:** PyTorch, TensorFlow, CNNs, Neural Networks.
 • **Computer Vision:** Image Classification, Image Segmentation, Feature Extraction.
 • **Programming:** Python.
@@ -192,17 +205,19 @@ All repos: https://github.com/rahimxai?tab=repositories`
       triggers: ['experience', 'work history', 'work experience', 'years of experience', 'how long', 'how many years', 'background', 'career', 'job history', 'previous job', 'current job', 'jobs'],
       answer: `Rahim's professional experience:
 
-• **Junior AI Engineer @ CareCloud** (Aug 2025 – Present) · leading the Medical Coding Automation multi-agent system. Automated healthcare pipeline progressing from LLMs to RAG-based multi-agent systems; fine-tuned LLaMA 3.3 with LoRA; designed agent-specific prompts; reduced manual data processing time by **40%**.
+• **AI Engineer @ Reporteq** (Jul 2026 – Present) · contributed to the development of an **AI calling agent** for document follow-up; added real-time **SWAIG function** to resend documents on live calls.
 
-• **IT Intern @ CareCloud** (Jun 2025 – Aug 2025) · contributed to an AI-powered X-ray analysis system; data preprocessing and automation research.
+• **Junior AI Engineer @ CareCloud** (Aug 2025 – Jul 2026) · automated healthcare pipeline progressing from LLMs to RAG-based multi-agent systems; fine-tuned LLaMA 3.3 with LoRA; designed agent-specific prompts; reduced manual data processing time by **40%**.
 
-About **1 year** of industry experience in total.`
+• **AI Intern @ CareCloud** (Jun – Aug 2025) · contributed to an AI-powered X-ray analysis system; data preprocessing and automation research.
+
+Over **1 year** of industry experience across two companies.`
     },
     {
       id: 'role_lead',
       priority: 5,
       triggers: ['team lead', 'lead', 'role', 'position', 'manager', 'manage'],
-      answer: `Rahim started as a developer on the Medical Coding Automation project and now acts as **Team Lead** · owning architecture decisions, agent testing, and the accuracy roadmap across CPT, ICD, Modifier, NCCI, LCD/NCD and MIPS modules.`
+      answer: `Rahim started as a developer on the Medical Coding Automation project at CareCloud and progressed to acting **Team Lead** before moving on to his current role as AI Engineer at **Reporteq**.`
     },
 
     /* ---------- Education ---------- */
@@ -237,7 +252,7 @@ About **1 year** of industry experience in total.`
       id: 'notice',
       priority: 9,
       triggers: ['notice period', 'notice', 'how soon', 'when can you join', 'when can you start', 'how soon can you join', 'joining', 'start date', 'availability', 'how quickly'],
-      answer: `Rahim's notice period is **30 days**, so he can **join within 30 days** of an offer.`
+      answer: `Rahim is **immediately available** — he can join as soon as an offer is made, with no notice period required.`
     },
 
     /* ---------- Languages (programming) ---------- */
@@ -295,7 +310,7 @@ He's open to **AI / ML / LLM / Computer Vision Engineer** roles · **on-site in 
       id: 'cv',
       priority: 5,
       triggers: ['cv', 'resume', 'download cv', 'download resume', 'pdf cv'],
-      answer: `Open the CV from the "View CV" button in the top navbar · it opens inline as a PDF. Direct link: assets/docs/Abdul-Rahim-CV.pdf.`
+      answer: `Open the CV from the “View CV” button in the top navbar · it opens inline as a PDF. Direct link: assets/docs/Abdul Rahim-AI Engineer.pdf.`
     },
 
     /* ---------- Demos ---------- */
@@ -307,7 +322,7 @@ He's open to **AI / ML / LLM / Computer Vision Engineer** roles · **on-site in 
     }
   ];
 
-  const FALLBACK = `I'm not sure about that one specifically. I can tell you about Rahim's **Medical Coding Automation** project, his **FYP (ZenBuild)**, **Bone Fracture Detection**, **Bird Classification**, his **early academic projects**, **experience**, **skills**, **education**, **location**, **notice period (30 days)**, or **how to contact** him. Try one of those!`;
+  const FALLBACK = `I'm not sure about that one specifically. I can tell you about Rahim's **Medical Coding Automation** project, his **FYP (ZenBuild)**, **Bone Fracture Detection**, **Bird Classification**, his **early academic projects**, **experience**, **skills**, **education**, **location**, **availability (immediate)**, or **how to contact** him. Try one of those!`;
 
   /* ===================== INTENT MATCHER ===================== */
   function normalize(s) {
@@ -363,18 +378,18 @@ He's open to **AI / ML / LLM / Computer Vision Engineer** roles · **on-site in 
   ];
 
   function startMouthAnim() {
-    avatarSVG.classList.add('speaking');
+    if (avatarSVG) avatarSVG.classList.add('speaking');
     if (statusEl) statusEl.textContent = 'Speaking…';
-    mouthInterval = setInterval(() => {
+    if (mouth) mouthInterval = setInterval(() => {
       const next = MOUTH_SHAPES[Math.floor(Math.random() * MOUTH_SHAPES.length)];
       mouth.setAttribute('d', next);
     }, 120);
   }
   function stopMouthAnim() {
-    avatarSVG.classList.remove('speaking');
+    if (avatarSVG) avatarSVG.classList.remove('speaking');
     if (statusEl) statusEl.textContent = 'Online · Ask me anything about Abdul';
     if (mouthInterval) { clearInterval(mouthInterval); mouthInterval = null; }
-    mouth.setAttribute('d', MOUTH_CLOSED);
+    if (mouth) mouth.setAttribute('d', MOUTH_CLOSED);
   }
 
   function speak(text) {
@@ -391,13 +406,13 @@ He's open to **AI / ML / LLM / Computer Vision Engineer** roles · **on-site in 
     const v = voices.find(v => /en[-_]/i.test(v.lang) && /female|zira|samantha|google/i.test(v.name)) ||
               voices.find(v => /en[-_]/i.test(v.lang)) || voices[0];
     if (v) u.voice = v;
-    u.onstart = () => { startMouthAnim(); caption.textContent = '🎙️ Speaking…'; };
-    u.onend   = () => { stopMouthAnim();  caption.textContent = 'Ask me anything else.'; };
+    u.onstart = () => { startMouthAnim(); if (caption) caption.textContent = '🎙️ Speaking…'; };
+    u.onend   = () => { stopMouthAnim();  if (caption) caption.textContent = 'Ask me anything else.'; };
     u.onerror = () => { stopMouthAnim(); };
     synth.speak(u);
   }
   function stopSpeaking() { try { synth.cancel(); } catch(_) {} stopMouthAnim(); }
-  if (synth && synth.onvoiceschanged !== undefined) { synth.onvoiceschanged = () => {}; }
+  if (synth && synth.onvoiceschanged !== undefined) { synth.onvoiceschanged = () => { synth.getVoices(); }; }
 
   /* ===================== CHAT UI ===================== */
   const chat = document.getElementById('chat');
@@ -439,7 +454,7 @@ He's open to **AI / ML / LLM / Computer Vision Engineer** roles · **on-site in 
     const answer = findAnswer(q);
     typing.remove();
     addMessage('bot', md(answer));
-    caption.textContent = q.length > 50 ? q.slice(0, 50) + '…' : q;
+    if (caption) caption.textContent = q.length > 50 ? q.slice(0, 50) + '…' : q;
     speak(answer);
   }
 
