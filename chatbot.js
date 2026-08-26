@@ -194,7 +194,7 @@ All repos: https://github.com/rahimxai?tab=repositories`
 • **Computer Vision:** Image Classification, Image Segmentation, Feature Extraction.
 • **Programming:** Python.
 • **Databases:** PostgreSQL, MySQL, Vector DBs (Pinecone, Qdrant).
-• **Deployment / APIs:** FastAPI, Flask, Docker.
+• **Deployment / API:** FastAPI, Flask, Docker.
 • **Web & Tools:** HTML, CSS, Git, GitHub.`
     },
 
@@ -209,7 +209,7 @@ All repos: https://github.com/rahimxai?tab=repositories`
 
 • **Junior AI Engineer @ CareCloud** (Aug 2025 – Jul 2026) · automated healthcare pipeline progressing from LLMs to RAG-based multi-agent systems; fine-tuned LLaMA 3.3 with LoRA; designed agent-specific prompts; reduced manual data processing time by **40%**.
 
-• **AI Intern @ CareCloud** (Jun – Aug 2025) · contributed to an AI-powered X-ray analysis system; data preprocessing and automation research.
+• **AI Intern @ CareCloud** (Jun 2025 – Aug 2025) · contributed to an AI-powered X-ray analysis system; data preprocessing and automation research.
 
 Over **1 year** of industry experience across two companies.`
     },
